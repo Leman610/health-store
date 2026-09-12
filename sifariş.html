@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Sifariş formu</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg rgb(231, 165, 22), rgb(3, 228, 190));
+        }
+
+        .header {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 370px;
+            box-shadow: 0 10px 25px #43405033;
+        }
+
+        .header h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1b1b1b;
+        }
+
+        .form {
+            display: flex;
+            margin-bottom: 17px;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 7px;
+            font-size: 17px;
+            color: rgb(36, 36, 39);
+        }
+
+        input,
+        select,
+        textarea {
+            border-radius: 15px;
+            padding: 15px;
+            border: 1px solid rgb(223, 223, 223);
+        }
+
+        button {
+            background-color: rgb(68, 68, 238);
+            color: white;
+            border-radius: 15px;
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="header">
+        <h1>Sifariş formu</h1>
+
+        <div class="form">
+            <label for="name">Adınız</label>
+            <input id="name" type="name" placeholder="Adınızı daxil edin" />
+        </div>
+        <div class="form">
+            <label for="email"> Email</label>
+            <input id="email" type="email" placeholder="Email daxil edin" />
+        </div>
+
+        <div class="form">
+            <label for="phone">Telefon</label>
+            <input id="phone" type="phone" placeholder="Telefon nömrəsi" />
+        </div>
+
+        <div class="form">
+            <label for="select">Məhsul seçin</label>
+            <select id="select">
+                <option>Seçin</option>
+                <option>Skaner</option>
+                <option>Printer</option>
+                <option>Sistem bloku</option>
+            </select>
+        </div>
+
+        <div class="form">
+            <label for="address">Ünvan</label>
+            <textarea id="address">Ünvanınızı yazın</textarea>
+        </div>
+        <button type="submit">Sifariş et</button>
+
+    </form>
+</body>
+
+</html>
