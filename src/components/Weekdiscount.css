@@ -1,0 +1,60 @@
+.weekdiscount {
+  padding: 50px;
+}
+.weekdiscount-content {
+  height: 325px;
+  background-color: #faf1f2;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.weekdiscount-card {
+  background-color: #fdf2fb;
+  border-radius: 15px;
+  width: 46%;
+  margin-left: 30px;
+  padding: 20px;
+}
+.weekdiscount-title {
+  color: #ff4e4e;
+  font-size: 15px;
+  font-weight: 500;
+}
+.weekdiscount-card h1 {
+  color: #131313;
+  font-size: 25px;
+  font-weight: 600;
+}
+.week-info {
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: 500;
+}
+.weekdiscount-btn {
+  background-color: #ff4e4e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 170px;
+  height: 50px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.weekdiscount-btn:hover {
+  background-color: #e7bac0;
+  transform: scale(1.08);
+}
+.weekdiscount-btn:active {
+  background-color: #6fb826;
+}
+.weekdiscount-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}

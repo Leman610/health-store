@@ -1,0 +1,75 @@
+.weekend {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+.weekend .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.weekend-title span {
+  background-color: #e2ebd1;
+  color: #62a403;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.weekend-title h1 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 30px;
+}
+.weekend-title p {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+.weekend-btn {
+  background-color: #F5F5F5;
+  color: #2B2A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 170px;
+  height: 50px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.weekend-btn strong {
+  font-size: 30px;
+}
+.weekend-btn:hover {
+  background-color: #f4f2f2;
+  transform: scale(1.08);
+}
+.weekend-btn:active {
+  background-color: #6fb826;
+}
+.weekend-image {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.weekend-image img {
+  width: 360px;
+  height: 300px;
+  position: absolute;
+  left: 80px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.weekend-image:hover {
+  transform: scale(1.05);
+}
