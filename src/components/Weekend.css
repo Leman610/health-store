@@ -1,0 +1,235 @@
+.weekend {
+  font-family: "Jost", sans-serif;
+  padding: 50px 20px;
+}
+.weekend .weekend-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.weekend-info {
+  width: 560px;
+}
+.weekend-heading {
+  display: inline-block;
+  background-color: #e4efd0;
+  color: #62a403;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 8px 22px;
+  border-radius: 40px;
+}
+.weekend-title {
+  color: #131313;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 66px;
+  margin: 25px 0;
+}
+.weekend-text {
+  color: #2b2a2a;
+  font-size: 19px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+.weekend-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  background-color: #f5f5f5;
+  color: #2b2a2a;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px 22px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.weekend-button svg {
+  font-size: 28px;
+}
+.weekend-button:hover {
+  background-color: #62a403;
+  color: #ffffff;
+}
+.weekend-button:active {
+  background-color: #94d638;
+}
+.weekend-image img {
+  display: block;
+  width: 360px;
+  max-width: 100%;
+}
+.weekend-card {
+  width: 240px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.weekend-product {
+  position: relative;
+  width: 100%;
+  height: 230px;
+}
+.weekend-product img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.weekend-percent {
+  background-color: #ff4e4e;
+  color: #ffffff;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 8px;
+  border-radius: 8px;
+}
+.weekend-icon {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #111111;
+  position: absolute;
+  right: 15px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  cursor: pointer;
+}
+.weekend-heart {
+  top: 12px;
+}
+.weekend-arrow {
+  top: 64px;
+}
+.weekend-icon:hover {
+  color: #62a403;
+}
+.weekend-details {
+  padding: 20px 15px;
+}
+.weekend-stars {
+  color: #fcc419;
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+}
+.weekend-name {
+  color: #111111;
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.weekend-price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+.weekend-price del {
+  color: #9c9c9c;
+  font-size: 18px;
+}
+.weekend-price strong {
+  color: #ff4e4e;
+  font-size: 22px;
+  font-weight: 600;
+}
+.weekend-remaining {
+  color: #9c9c9c;
+  margin-top: 15px;
+  font-size: 17px;
+}
+.weekend-btn {
+  background-color: #018d43;
+  color: #ffffff;
+  margin-top: 15px;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 13px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.weekend-btn:hover {
+  background-color: #8bd326;
+}
+.weekend-btn:active {
+  background-color: #f5f5f5;
+  color: #62a403;
+  transform: scale(0.9);
+}
+@media (max-width: 1024px) {
+  .weekend .weekend-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .weekend-info {
+    width: 100%;
+  }
+  .weekend-title {
+    font-size: 44px;
+    line-height: 54px;
+  }
+}
+@media (max-width: 768px) {
+  .weekend {
+    padding: 30px 15px;
+  }
+  .weekend .weekend-content {
+    flex-direction: column;
+  }
+  .weekend-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .weekend-image img {
+    width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .weekend {
+    padding: 20px 10px;
+  }
+  .weekend-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .weekend-text {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .weekend-badge {
+    font-size: 16px;
+  }
+  .weekend-shop {
+    font-size: 17px;
+  }
+  .weekend-image img {
+    width: 100%;
+  }
+  .weekend-card {
+    width: 100%;
+  }
+}

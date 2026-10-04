@@ -1,0 +1,158 @@
+.week-discount {
+  width: 100%;
+  padding: 50px;
+  font-family: sans-serif;
+}
+.week-discount .container {
+  flex-direction: column;
+  align-items: stretch;
+}
+.week-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.week-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+.week-box {
+  position: relative;
+  width: 32%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 25px 25px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.week-info {
+  width: 140px;
+}
+.week-heading {
+  color: #018d43;
+  font-size: 15px;
+  font-weight: 600;
+}
+.week-names {
+  color: #131313;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.week-text {
+  color: #9c9c9c;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px 0 20px;
+}
+.week-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.week-price p {
+  color: #9c9c9c;
+  font-size: 15px;
+  margin-top: 12px;
+}
+.week-price span {
+  color: #2b2a2a;
+  font-size: 20px;
+  font-weight: 600;
+}
+.week-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+.week-image img {
+  height: 100%;
+  transition: transform 0.8s ease;
+}
+.week-box:hover .week-image img {
+  transform: scale(1.1);
+}
+@media (max-width: 1024px) {
+  .week-discount {
+    padding: 40px 30px;
+  }
+  .week-content {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .week-box {
+    width: 48%;
+  }
+  .week-names {
+    font-size: 28px;
+  }
+  .week-info {
+    width: 130px;
+  }
+}
+@media (max-width: 768px) {
+  .week-discount {
+    padding: 35px 20px;
+  }
+  .week-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .week-box {
+    width: 100%;
+    min-height: 200px;
+  }
+  .week-info {
+    width: 160px;
+  }
+  .week-names {
+    font-size: 28px;
+  }
+  .week-text {
+    font-size: 14px;
+  }
+  .week-image {
+    height: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .week-discount {
+    padding: 30px 15px;
+  }
+  .week-title {
+    font-size: 17px;
+  }
+  .week-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .week-box {
+    width: 100%;
+    min-height: 180px;
+    padding: 15px 15px 20px 20px;
+  }
+  .week-info {
+    width: 130px;
+  }
+  .week-heading {
+    font-size: 14px;
+  }
+  .week-names {
+    font-size: 24px;
+    margin: 8px 0;
+  }
+  .week-text {
+    font-size: 13px;
+    margin: 8px 0 15px;
+  }
+  .week-price p {
+    font-size: 13px;
+  }
+  .week-price span {
+    font-size: 18px;
+  }
+}
