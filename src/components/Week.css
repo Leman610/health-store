@@ -75,3 +75,84 @@
 .week-box:hover .week-image img {
   transform: scale(1.1);
 }
+@media (max-width: 1024px) {
+  .week-discount {
+    padding: 40px 30px;
+  }
+  .week-content {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .week-box {
+    width: 48%;
+  }
+  .week-names {
+    font-size: 28px;
+  }
+  .week-info {
+    width: 130px;
+  }
+}
+@media (max-width: 768px) {
+  .week-discount {
+    padding: 35px 20px;
+  }
+  .week-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .week-box {
+    width: 100%;
+    min-height: 200px;
+  }
+  .week-info {
+    width: 160px;
+  }
+  .week-names {
+    font-size: 28px;
+  }
+  .week-text {
+    font-size: 14px;
+  }
+  .week-image {
+    height: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .week-discount {
+    padding: 30px 15px;
+  }
+  .week-title {
+    font-size: 17px;
+  }
+  .week-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .week-box {
+    width: 100%;
+    min-height: 180px;
+    padding: 15px 15px 20px 20px;
+  }
+  .week-info {
+    width: 130px;
+  }
+  .week-heading {
+    font-size: 14px;
+  }
+  .week-names {
+    font-size: 24px;
+    margin: 8px 0;
+  }
+  .week-text {
+    font-size: 13px;
+    margin: 8px 0 15px;
+  }
+  .week-price p {
+    font-size: 13px;
+  }
+  .week-price span {
+    font-size: 18px;
+  }
+}

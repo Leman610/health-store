@@ -34,10 +34,10 @@ const Hero = () => {
               <span>Natural medicine can heal you better than you think</span>
             </div>
           </div>
-            <button className="hero-btn">
-              Shop Now
-              <span>→</span>
-            </button>
+          <button className="hero-btn">
+            Shop Now
+            <span>→</span>
+          </button>
         </div>
       </div>
     </div>

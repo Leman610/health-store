@@ -6,11 +6,13 @@ import { Navbar } from "./components/Navbar";
 import Hero from "./components/Hero";
 import Categories from "./components/Categories";
 import Week from "./components/Week";
-import Sale from "./components/Sale"
+import Sale from "./components/Sale";
 import Health from "./components/Health";
-import Discount from "./components/Discount"
+import Products from "./components/Products";
+import Discount from "./components/Discount";
 import Weekend from "./components/Weekend";
 import Weekdiscount from "./components/Weekdiscount";
+import Advice from "./components/Advice";
 import Footer from "./components/Footer";
 
 import TrackOrder from "./pages/TrackOrder";
@@ -33,11 +35,13 @@ const App = () => {
               <Hero />
               <Categories />
               <Week />
-              <Sale/>
+              <Sale />
               <Health />
+              <Products />
               <Discount />
               <Weekend />
               <Weekdiscount />
+              <Advice />
             </div>
           }
         />

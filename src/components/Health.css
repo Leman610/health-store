@@ -106,4 +106,119 @@
 .health-photo:hover {
   transform: scale(1.05);
 }
-
+@media (max-width: 1024px) {
+  .health {
+    height: 550px;
+  }
+  .health .container {
+    gap: 30px;
+  }
+  .digestive-title h1 {
+    font-size: 34px;
+  }
+  .digestive-title p {
+    font-size: 16px;
+  }
+  .health-photo {
+    width: 42%;
+  }
+  .health-photo img {
+    width: 380px;
+    height: 450px;
+  }
+}
+@media (max-width: 768px) {
+  .health {
+    height: auto;
+    padding: 50px 0;
+  }
+  .health .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .health-content {
+    width: 100%;
+    text-align: center;
+  }
+  .digestive-title h1 {
+    font-size: 32px;
+    margin-top: 25px;
+  }
+  .digestive-title p {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .health-frame {
+    align-items: center;
+  }
+  .health-info {
+    justify-content: center;
+  }
+  .health-btn {
+    margin: 25px auto 0;
+  }
+  .health-photo {
+    width: 100%;
+  }
+  .health-photo img {
+    width: 350px;
+    height: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .health {
+    height: auto;
+    padding: 40px 15px;
+  }
+  .health .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .health-content {
+    width: 100%;
+  }
+  .digestive-title span {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .digestive-title h1 {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  .digestive-title p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .health-frame {
+    gap: 12px;
+    padding-top: 15px;
+  }
+  .health-info {
+    gap: 12px;
+  }
+  .health-info img {
+    width: 25px;
+    height: 25px;
+  }
+  .health-info span {
+    font-size: 14px;
+  }
+  .health-btn {
+    width: 150px;
+    height: 45px;
+    font-size: 17px;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .health-btn span {
+    font-size: 25px;
+  }
+  .health-photo {
+    width: 100%;
+  }
+  .health-photo img {
+    width: 280px;
+    height: 330px;
+  }
+}

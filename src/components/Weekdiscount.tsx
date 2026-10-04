@@ -6,11 +6,12 @@ const Weekdiscount = () => {
       <div className="container weekdiscount-content">
         <div className="weekdiscount-card">
           <p className="weekdiscount-title">Weekend Discount</p>
-          <h1>
-            Healthier you use, healthiest to <br />
-            stay
-          </h1>
-          <p className="week-info">Natural medicine is the main reason of health</p>
+          <h2 className="weekdiscount-head">
+            Healthier you use, healthiest to stay
+          </h2>
+          <p className="weekdiscount-text">
+            Natural medicine is the main reason of health
+          </p>
           <button className="weekdiscount-btn">
             Shop Now
             <strong>→</strong>

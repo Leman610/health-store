@@ -51,7 +51,7 @@
   font-weight: 500;
 }
 .hero-btn {
-  background-color: #62A403;
+  background-color: #62a403;
   color: white;
   display: flex;
   align-items: center;
@@ -83,11 +83,9 @@
   .hero-text h1 {
     font-size: 32px;
   }
-
   .hero-text p {
     font-size: 15px;
   }
-
   .hero-info span {
     font-size: 14px;
   }

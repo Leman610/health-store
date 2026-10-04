@@ -45,45 +45,57 @@
   font-size: 14px;
 }
 @media (max-width: 1024px) {
-  .nav-bar-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .nav-links {
     gap: 25px;
   }
-
-  .nav-links a,
+  .nav-links a {
+    font-size: 14px;
+  }
   .shopping-selector {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (max-width: 768px) {
+  .nav-bar {
+    height: auto;
+  }
+  .nav-bar-content {
+    justify-content: center;
+  }
   .nav-links {
     gap: 20px;
+    padding: 0;
   }
-
-  .nav-links a,
-  .shopping-selector {
-    font-size: 11px;
+  .nav-links a {
+    font-size: 13px;
   }
-
   .shopping-selector {
+    font-size: 13px;
     padding: 12px 0;
+  }
+  .shopping-selector option {
+    font-size: 13px;
   }
 }
 @media (max-width: 480px) {
+  .nav-bar {
+    height: auto;
+  }
+  .nav-bar-content {
+    justify-content: center;
+  }
   .nav-links {
     gap: 12px;
+    padding: 0;
   }
-
-  .nav-links a,
-  .shopping-selector {
-    font-size: 10px;
+  .nav-links a {
+    font-size: 11px;
   }
-
   .shopping-selector {
+    font-size: 11px;
     padding: 10px 0;
+  }
+  .shopping-selector option {
+    font-size: 11px;
   }
 }

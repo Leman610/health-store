@@ -10,13 +10,13 @@ const Topbar = () => {
           <li>
             <Link to="/track-order">Track Order</Link>
           </li>
-           <li>
+          <li>
             <Link to="/about-us">About Us</Link>
           </li>
-           <li>
+          <li>
             <Link to="/contact">Contact</Link>
           </li>
-           <li>
+          <li>
             <Link to="/faq">FAQ</Link>
           </li>
         </ul>

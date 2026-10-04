@@ -3,7 +3,7 @@ import health from "../assets/Health.png";
 import apple from "../assets/apple.png";
 import leaf from "../assets/leaf.png";
 import scan from "../assets/scan-heart.png";
-import photo from "../assets/health-photo.png"
+import photo from "../assets/health-photo.png";
 
 const Health = () => {
   return (
@@ -23,29 +23,29 @@ const Health = () => {
               ingredients.
             </p>
           </div>
-        <div className="health-frame">
-          <div className="health-info">
-            <img src={apple} alt="Ingredients" />
-            <span>Made from several ingredients</span>
+          <div className="health-frame">
+            <div className="health-info">
+              <img src={apple} alt="Ingredients" />
+              <span>Made from several ingredients</span>
+            </div>
+            <div className="health-info">
+              <img src={leaf} alt="Natural" />
+              <span>100% natural</span>
+            </div>
+            <div className="health-info">
+              <img src={scan} alt="Scan" />
+              <span>Has healing powers</span>
+            </div>
           </div>
-          <div className="health-info">
-            <img src={leaf} alt="Natural" />
-            <span>100% natural</span>
-          </div>
-          <div className="health-info">
-            <img src={scan} alt="Scan" />
-            <span>Has healing powers</span>
-          </div>
+          <button className="health-btn">
+            Shop Now
+            <span>→</span>
+          </button>
         </div>
-        <button className="health-btn">
-          Shop Now
-          <span>→</span>
-        </button>
-      </div>
-      <div className="health-photo">
-      <img src={photo} alt="Girl-photo" />
-      </div>
+        <div className="health-photo">
+          <img src={photo} alt="Girl-photo" />
         </div>
+      </div>
     </div>
   );
 };

@@ -55,15 +55,15 @@
   margin-left: 40px;
   cursor: pointer;
 }
-.user-info h5{
-  color: #86D218;
+.user-info h5 {
+  color: #86d218;
   font-size: 14px;
 }
-.user-info h3{
-  color: #FFFFFF;
+.user-info h3 {
+  color: #ffffff;
   font-size: 17px;
 }
-.header-icons{
+.header-icons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,9 +80,9 @@
 .header-icons:active {
   background-color: #6fb826;
 }
-.number-count{
-  background-color: #05422C;
-  color: #FFFFFF;
+.number-count {
+  background-color: #05422c;
+  color: #ffffff;
   position: absolute;
   top: 0;
   right: 0;
@@ -96,27 +96,25 @@
   border-radius: 50%;
 }
 @media (max-width: 1024px) {
-  .header-content {
-    gap: 10px;
-  }
-
-  .logo-name {
-    padding-left: 10px;
-  }
-
   .header-search {
-    width: 50%;
-    margin-left: 15px;
+    width: 55%;
+    margin-left: 20px;
   }
-
   .header-user {
-    gap: 10px;
-    margin-left: 15px;
+    gap: 15px;
+    margin-left: 20px;
   }
-
+  .logo-name {
+    padding-left: 15px;
+  }
   .header-icons {
     margin-left: 10px;
-    width: 40px;
+  }
+  .user-info h5 {
+    font-size: 12px;
+  }
+  .user-info h3 {
+    font-size: 15px;
   }
 }
 @media (max-width: 768px) {
@@ -124,119 +122,108 @@
     height: auto;
     padding: 15px 0;
   }
-
   .header-content {
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 15px;
+    justify-content: center;
+    gap: 15px;
   }
-
   .logo img {
     width: 50px;
     height: 45px;
   }
-
   .logo-name {
-    padding-left: 5px;
+    padding-left: 10px;
   }
-
   .logo-name h2 {
     font-size: 18px;
   }
-
   .logo-name h5 {
     font-size: 12px;
   }
-
   .header-search {
-    order: 3;
     width: 100%;
-    height: 40px;
+    height: 38px;
     margin-left: 0;
+    order: 3;
   }
-
+  .search-input {
+    font-size: 14px;
+    padding-left: 15px;
+  }
   .header-user {
-    margin-left: auto;
-    gap: 8px;
+    gap: 10px;
+    margin-left: 10px;
   }
-
   .user-info h5 {
-    font-size: 12px;
+    font-size: 11px;
   }
-
   .user-info h3 {
-    font-size: 15px;
+    font-size: 14px;
   }
-
   .header-icons {
+    width: 40px;
+    height: 35px;
     margin-left: 5px;
-    width: 35px;
+  }
+  .number-count {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
   }
 }
 @media (max-width: 480px) {
-  .header-content {
-    column-gap: 5px;
-    row-gap: 12px;
+  .main-header {
+    height: auto;
+    padding: 12px 0;
   }
-
+  .header-content {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
   .logo img {
-    width: 40px;
+    width: 45px;
     height: 40px;
   }
-
   .logo-name {
     padding-left: 5px;
   }
-
   .logo-name h2 {
     font-size: 16px;
   }
-
   .logo-name h5 {
     font-size: 11px;
   }
-
+  .header-search {
+    width: 100%;
+    height: 35px;
+    margin-left: 0;
+    order: 3;
+  }
+  .search-input {
+    font-size: 13px;
+    padding-left: 12px;
+  }
+  .search-btn {
+    width: 40px;
+  }
   .header-user {
     gap: 5px;
-    margin-left: auto;
+    margin-left: 5px;
   }
-
-  .header-user img {
-    width: 20px;
-    height: 20px;
-  }
-
   .user-info h5 {
     font-size: 10px;
   }
-
   .user-info h3 {
-    font-size: 13px;
+    font-size: 12px;
   }
-
   .header-icons {
-    width: 28px;
-    height: 35px;
+    width: 35px;
+    height: 32px;
     margin-left: 3px;
   }
-
-  .header-icons img {
-    width: 22px;
-    height: 22px;
-  }
-
   .number-count {
     width: 16px;
     height: 16px;
-    font-size: 10px;
-  }
-
-  .search-input {
-    padding-left: 12px;
-    font-size: 13px;
-  }
-
-  .search-btn {
-    width: 40px;
+    font-size: 9px;
   }
 }

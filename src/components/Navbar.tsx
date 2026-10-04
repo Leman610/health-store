@@ -6,15 +6,15 @@ export const Navbar = () => {
       <div className="container nav-bar-content">
         <ul className="nav-links">
           <li>
-            <Link to="/" >HOME</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-           <select className="shopping-selector">
-            <option value="">SHOP</option>
-            <option>CATEGORİES</option>
-            <option>FİLTER BY PRİCE</option>
-            <option> PRODUCT STATUS</option>
-          </select> 
+            <select className="shopping-selector">
+              <option value="">SHOP</option>
+              <option>CATEGORİES</option>
+              <option>FİLTER BY PRİCE</option>
+              <option> PRODUCT STATUS</option>
+            </select>
           </li>
           <li>
             <Link to="/blog">BLOG</Link>
