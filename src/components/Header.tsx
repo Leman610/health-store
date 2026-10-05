@@ -1,4 +1,5 @@
 import "./Header.css";
+import { Link } from "react-router-dom";
 import logo from "../assets/Sante.logo.png";
 import { Search } from "lucide-react";
 import user from "../assets/user-round.png";
@@ -6,41 +7,45 @@ import heart from "../assets/heart.png";
 import shopping from "../assets/shopping-cart.png";
 export const Header = () => {
   return (
-    <header className="main-header">
+    <div className="header">
       <div className="container header-content">
-        <div className="logo">
-          <img src={logo} alt="Sante Consciente" />
-        </div>
-        <div className="logo-name">
-          <h2>Santé</h2>
-          <h5>Consciente</h5>
-        </div>
-        <div className="header-search">
+        <Link to="/" className="logo">
+          <img src={logo} alt="" />
+          <div className="logo-name">
+            <span>Santé</span>
+            <span>Consciente</span>
+          </div>
+        </Link>
+
+        <form className="header-search">
           <input
-            type="text"
+            type="search"
             placeholder="Search for products..."
             className="search-input"
           />
-          <button className="search-btn">
-            <Search size={20} />
+          <button type="submit" className="search-btn">
+            <Search size={22} />
           </button>
-        </div>
+        </form>
+
         <div className="header-user">
-          <img src={user} alt="User" />
+          <img src={user} alt="" />
           <div className="user-info">
-            <h5>Welcome</h5>
-            <h3>Jhon</h3>
+            <span className="user-welcome">Welcome</span>
+            <span className="user-name">Jhon</span>
           </div>
         </div>
-        <div className="header-icons">
-          <img src={heart} alt="favorites" />
-          <p className="number-count">1</p>
-        </div>
-        <div className="header-icons">
-          <img src={shopping} alt="Shopping" />
-          <p className="number-count">1</p>
-        </div>
+
+        <Link to="/wish" className="header-icons" aria-label="Favorites">
+          <img src={heart} alt="" />
+          <span className="number-count">1</span>
+        </Link>
+
+        <Link to="/cart" className="header-icons" aria-label="Shopping cart">
+          <img src={shopping} alt="" />
+          <span className="number-count">1</span>
+        </Link>
       </div>
-    </header>
+    </div>
   );
 };

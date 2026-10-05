@@ -11,9 +11,9 @@ export const Navbar = () => {
           <li>
             <select className="shopping-selector">
               <option value="">SHOP</option>
-              <option>CATEGORİES</option>
-              <option>FİLTER BY PRİCE</option>
-              <option> PRODUCT STATUS</option>
+              <option value="CATEGORİES">CATEGORİES</option>
+              <option value="FİLTER BY PRİCE">FİLTER BY PRİCE</option>
+              <option value="PRODUCT STATUS">PRODUCT STATUS</option>
             </select>
           </li>
           <li>

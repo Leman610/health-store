@@ -19,7 +19,12 @@ import TrackOrder from "./pages/TrackOrder";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
+import Shop from "./pages/Shop"
 import Blog from "./pages/Blog";
+import Society from "./pages/Society";
+import Alimentation from "./pages/Alimentation";
+import Misceleneaous from "./pages/Misceleneaous";
+
 
 const App = () => {
   return (
@@ -48,8 +53,13 @@ const App = () => {
         <Route path="/track-order" element={<TrackOrder />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/society" element={<Society />} />
+        <Route path="/alimentation" element={<Alimentation />} />
+        <Route path="/misceleneaous" element={<Misceleneaous />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>
