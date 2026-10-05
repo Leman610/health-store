@@ -1,52 +1,60 @@
-.main-header {
+.header {
   background-color: #62a403;
   color: #ffffff;
-  height: 80px;
 }
 .header-content {
-  height: 100%;
+  min-height: 80px;
   display: flex;
   align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
 }
 .logo img {
   width: 60px;
   height: 50px;
+  transition: transform 0.2s ease;
 }
-.logo img:hover {
-  transform: scale(1.08);
+.logo:hover img {
+  transform: scale(1.09);
 }
 .logo-name {
+  display: flex;
+  flex-direction: column;
   padding-left: 30px;
-  cursor: pointer;
 }
-.logo-name h2 {
+.logo-name span{
   font-size: 20px;
+  font-weight: bold;
 }
-.logo-name h5 {
+.logo-name span:last-child {
   font-size: 14px;
 }
 .header-search {
   display: flex;
   align-items: center;
-  width: 65%;
+  flex: auto;
   height: 40px;
   margin-left: 30px;
 }
 .search-input {
   width: 100%;
   height: 100%;
-  padding-left: 25px;
+  padding-left: 30px;
   font-size: 15px;
   border: none;
   border-radius: 8px 0 0 8px;
 }
 .search-btn {
-  background-color: #064b3b;
+  background-color: #05422C;
   color: #ffffff;
   width: 45px;
   height: 100%;
   border: none;
   border-radius: 0 8px 8px 0;
+  cursor: pointer;
 }
 .header-user {
   display: flex;
@@ -55,22 +63,28 @@
   margin-left: 40px;
   cursor: pointer;
 }
-.user-info h5 {
-  color: #86d218;
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+.user-welcome {
+  color: #f5f5f5;
   font-size: 14px;
 }
-.user-info h3 {
+.user-name {
   color: #ffffff;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .header-icons {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 50px;
-  height: 40px;
+  width: 40px;
+  height: 30px;
   margin-left: 20px;
+  border-radius: 8px;
   cursor: pointer;
 }
 .header-icons:hover {
@@ -81,7 +95,7 @@
   background-color: #6fb826;
 }
 .number-count {
-  background-color: #05422c;
+  background-color: #05422C;
   color: #ffffff;
   position: absolute;
   top: 0;
@@ -95,31 +109,38 @@
   font-weight: bold;
   border-radius: 50%;
 }
+/* ---------- Responsive ---------- */
+
 @media (max-width: 1024px) {
+  .logo-name {
+    padding-left: 15px;
+  }
+  .logo-name span {
+    font-size: 18px;
+  }
+  .logo-name span:last-child {
+    font-size: 13px;
+  }
   .header-search {
-    width: 55%;
     margin-left: 20px;
   }
   .header-user {
     gap: 15px;
     margin-left: 20px;
   }
-  .logo-name {
-    padding-left: 15px;
+  .user-welcome {
+    font-size: 12px;
+  }
+  .user-name {
+    font-size: 16px;
   }
   .header-icons {
     margin-left: 10px;
   }
-  .user-info h5 {
-    font-size: 12px;
-  }
-  .user-info h3 {
-    font-size: 15px;
-  }
 }
+
 @media (max-width: 768px) {
-  .main-header {
-    height: auto;
+  .header {
     padding: 15px 0;
   }
   .header-content {
@@ -134,35 +155,34 @@
   .logo-name {
     padding-left: 10px;
   }
-  .logo-name h2 {
-    font-size: 18px;
+  .logo-name span {
+    font-size: 17px;
   }
-  .logo-name h5 {
+  .logo-name span:last-child {
     font-size: 12px;
   }
   .header-search {
+    flex: none;
     width: 100%;
     height: 38px;
     margin-left: 0;
     order: 3;
   }
   .search-input {
-    font-size: 14px;
     padding-left: 15px;
+    font-size: 14px;
   }
   .header-user {
     gap: 10px;
     margin-left: 10px;
   }
-  .user-info h5 {
+  .user-welcome {
     font-size: 11px;
   }
-  .user-info h3 {
+  .user-name {
     font-size: 14px;
   }
   .header-icons {
-    width: 40px;
-    height: 35px;
     margin-left: 5px;
   }
   .number-count {
@@ -171,13 +191,12 @@
     font-size: 10px;
   }
 }
+
 @media (max-width: 480px) {
-  .main-header {
-    height: auto;
+  .header {
     padding: 12px 0;
   }
   .header-content {
-    flex-wrap: wrap;
     gap: 10px;
   }
   .logo img {
@@ -187,39 +206,36 @@
   .logo-name {
     padding-left: 5px;
   }
-  .logo-name h2 {
-    font-size: 16px;
+  .logo-name span {
+    font-size: 15px;
   }
-  .logo-name h5 {
+  .logo-name span:last-child {
     font-size: 11px;
   }
   .header-search {
-    width: 100%;
     height: 35px;
-    margin-left: 0;
-    order: 3;
   }
   .search-input {
-    font-size: 13px;
     padding-left: 12px;
+    font-size: 13px;
   }
   .search-btn {
     width: 40px;
   }
   .header-user {
-    gap: 5px;
-    margin-left: 5px;
+    gap: 6px;
+    margin-left: 0;
   }
-  .user-info h5 {
+  .user-welcome {
     font-size: 10px;
   }
-  .user-info h3 {
-    font-size: 12px;
+  .user-name {
+    font-size: 13px;
   }
   .header-icons {
     width: 35px;
-    height: 32px;
-    margin-left: 3px;
+    height: 28px;
+    margin-left: 0;
   }
   .number-count {
     width: 16px;

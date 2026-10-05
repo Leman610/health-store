@@ -1,207 +1,185 @@
 .footer {
   background-color: #62a403;
-  color: white;
-  height: 480px;
-  padding-top: 50px;
+  color: #f5f5f5;
+  font-family: "Jost", sans-serif;
+  padding: 70px 20px 40px;
 }
 .footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
 }
-.footer-contact h2,
-.footer-contact h4 {
-  cursor: pointer;
-}
-.footer-content h1 {
-  font-size: 25px;
-  font-weight: 500;
-}
-.footer-contact p {
-  font-size: 17px;
-  padding: 17px 0;
-}
-.footer-contact h2 {
-  color: #05422c;
-  font-size: 30px;
-  font-weight: 700;
-  padding-bottom: 10px;
-}
-.footer-contact h4 {
-  color: #f5f5f5;
-  font-size: 15px;
-  padding: 7px 0;
-}
-.footer-navigation ul,
-.footer-blog ul {
+.footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+.footer-title {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.footer-info {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+.footer-phone {
+  color: #05422c;
+  font-size: 37px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+.footer-email,
+.footer-day {
+  color: #f5f5f5;
+  font-size: 17px;
+  padding-bottom: 15px;
+}
+.footer-hour {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+.footer ul {
   list-style: none;
-  margin-top: 20px;
+}
+.footer li {
+  margin-bottom: 20px;
+}
+.footer li a {
+  color: #f5f5f5;
   font-size: 18px;
 }
-.footer-navigation li a,
-.footer-blog li a {
-  color: #f5f5f5;
+.footer li a:hover,
+.footer-contact a:hover {
+  color: #05422c;
 }
-.footer-navigation a:hover,
-.footer-blog li a:hover {
-  color: #78c906;
-}
-.footer-navigation a:active,
-.footer-blog li a:active {
-  color: #93f20e;
+.footer li a:active,
+.footer-contact a:active {
+  color: #8ae60a;
 }
 .footer-app button {
   background-color: #333333;
   color: #f5f5f5;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  gap: 10px;
   border: none;
-  border-radius: 5px;
-  font-size: 15px;
-  width: 220px;
-  height: 50px;
-  margin-top: 15px;
+  border-radius: 15px;
+  padding: 12px 17px;
+  margin-bottom: 17px;
+  font-size: 17px;
   cursor: pointer;
+}
+.footer-app button {
+  background-color: #333333;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 17px;
+  margin-bottom: 17px;
+  font-size: 17px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
 }
 .footer-app button:hover {
   background-color: #62a403;
-  transform: scale(1.18);
 }
 .footer-app button:active {
-  background-color: #6fb826;
+  transform: scale(1.09);
+}
+.footer-app button img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.footer-app button img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 .footer-end {
-  font-size: 18px;
-  margin-top: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
 }
-.footer-end button {
-  background-color: #b0db95;
-  color: #2b2a2a;
+.footer-end p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.footer-paypal {
+  background-color: #b5d68a;
+  color: #333;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
-  border: none;
-  border-radius: 5px;
-  font-size: 17px;
-  font-weight: bold;
-  width: 270px;
-  height: 40px;
-  cursor: pointer;
-}
-.footer-end button:hover {
-  background-color: #62a403;
-  transform: scale(1.1);
-}
-.footer-end button:active {
-  background-color: #6fb826;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
 }
 @media (max-width: 1024px) {
   .footer {
-    height: auto;
-    padding: 40px 0;
+    padding: 60px 20px 40px;
   }
   .footer-content {
     gap: 30px;
   }
-  .footer-content h1 {
-    font-size: 22px;
+  .footer-title {
+    font-size: 25px;
+    margin-bottom: 25px;
   }
-  .footer-contact p {
-    font-size: 15px;
+  .footer-phone {
+    font-size: 32px;
   }
-  .footer-contact h2 {
-    font-size: 27px;
-  }
-  .footer-contact h4 {
-    font-size: 14px;
-  }
-  .footer-navigation ul,
-  .footer-blog ul {
-    gap: 15px;
-    font-size: 16px;
-  }
-  .footer-app button {
-    width: 190px;
-    height: 45px;
-    font-size: 14px;
-  }
-  .footer-end {
-    font-size: 16px;
-    margin-top: 30px;
-  }
-  .footer-end button {
-    width: 230px;
-    height: 38px;
-    font-size: 15px;
+  .footer-info br {
+    display: none;
   }
 }
 @media (max-width: 768px) {
   .footer {
-    height: auto;
-    padding: 40px 0;
-  }
-  .footer-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px;
+    padding: 50px 20px 30px;
     text-align: center;
   }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
   .footer-contact,
-  .footer-navigation,
-  .footer-blog,
   .footer-app {
-    width: 45%;
+    flex: none;
+    width: 100%;
+    align-items: center;
   }
-  .footer-content h1 {
-    font-size: 21px;
+  .footer-navigation,
+  .footer-blog {
+    flex: none;
+    width: 100%;
   }
-  .footer-contact p {
-    font-size: 14px;
-    padding: 12px 0;
+  .footer-app {
+    display: flex;
+    flex-direction: column;
   }
-  .footer-contact h2 {
-    font-size: 25px;
-  }
-  .footer-contact h4 {
-    font-size: 13px;
-  }
-  .footer-navigation ul,
-  .footer-blog ul {
-    gap: 12px;
-    font-size: 15px;
+  .footer ul {
     padding: 0;
-  }
-  .footer-app button {
-    width: 180px;
-    height: 45px;
-    font-size: 13px;
-    margin: 15px auto 0;
   }
   .footer-end {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    font-size: 14px;
-    margin-top: 35px;
-    text-align: center;
-  }
-  .footer-end button {
-    width: 220px;
-    height: 38px;
-    font-size: 14px;
   }
 }
 @media (max-width: 480px) {
   .footer {
-    height: auto;
-    padding: 30px 15px;
+    padding: 40px 15px 25px;
+    text-align: center;
   }
   .footer-content {
     flex-direction: column;
@@ -209,48 +187,48 @@
     gap: 30px;
   }
   .footer-contact,
-  .footer-navigation,
-  .footer-blog,
   .footer-app {
+    flex: none;
     width: 100%;
-    text-align: center;
+    align-items: center;
   }
-  .footer-content h1 {
-    font-size: 19px;
+  .footer-navigation,
+  .footer-blog {
+    flex: none;
+    width: 100%;
   }
-  .footer-contact p {
-    font-size: 13px;
-    padding: 10px 0;
+  .footer-app {
+    display: flex;
+    flex-direction: column;
   }
-  .footer-contact h2 {
-    font-size: 23px;
-  }
-  .footer-contact h4 {
-    font-size: 12px;
-  }
-  .footer-navigation ul,
-  .footer-blog ul {
-    gap: 10px;
-    font-size: 14px;
+  .footer ul {
     padding: 0;
-    margin-top: 15px;
   }
-  .footer-app button {
-    width: 170px;
-    height: 42px;
-    font-size: 12px;
-    margin: 10px auto 0;
+  .footer-title {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+  .footer-info,
+  .footer li a {
+    font-size: 16px;
+  }
+  .footer-phone {
+    font-size: 28px;
+  }
+  .footer li {
+    margin-bottom: 14px;
   }
   .footer-end {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    font-size: 13px;
     margin-top: 30px;
   }
-  .footer-end button {
-    width: 240px;
-    height: 36px;
-    font-size: 13px;
+  .footer-end p {
+    font-size: 16px;
+    margin: 0;
+  }
+  .footer-paypal {
+    justify-content: center;
   }
 }
