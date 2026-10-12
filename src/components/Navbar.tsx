@@ -24,22 +24,30 @@ export const Navbar = () => {
 
           <li className="shopping-selector">
             <div className="shop-arrow">
-              <Link to="/shop">SHOP</Link>
-              <IoIosArrowDown className="arrow-icon" onClick={toggleMenu} />
+              <Link to="/shop" onClick={closeMenu}>
+                SHOP
+              </Link>
+
+              <IoIosArrowDown
+                className="arrow-icon"
+                onClick={toggleMenu}
+              />
             </div>
 
             {showMenu && (
               <ul className="shop-part">
                 <li>
                   <Link to="/shop/categories" onClick={closeMenu}>
-                    Categories
+                    Categoriess
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/shop/filter-by-price" onClick={closeMenu}>
                     Filter by price
                   </Link>
                 </li>
+
                 <li>
                   <Link to="/shop/product-status" onClick={closeMenu}>
                     Product Status
@@ -52,6 +60,7 @@ export const Navbar = () => {
           <li>
             <Link to="/blog">BLOG</Link>
           </li>
+
           <li>
             <Link to="/faq">FAQ</Link>
           </li>

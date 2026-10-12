@@ -9,7 +9,12 @@ const Shop = () => {
   return (
     <div className="shop-page">
       <div className="our-shop">
-        <img src={shopdessert} alt="" className="dessert-image" />
+        <img
+          src={shopdessert}
+          alt="Dessert"
+          className="dessert-image"
+        />
+
         <div className="container our-shop-content">
           <div className="our-shop-text">
             <h1>Our Shop</h1>
@@ -21,19 +26,25 @@ const Shop = () => {
           </div>
         </div>
       </div>
+
       <Shopheader />
+
       <div className="shop-container">
         <Sidebar />
+
         <div className="shop-products-content">
           <ProductList />
         </div>
       </div>
+
       <div className="view-cart">
         <span>
-          Mini & Ginger Disgestive Herbal <br />
+          Mint & Ginger Digestive Herbal <br />
           Tea has been added to your cart
         </span>
+
         <FaXmark />
+
         <p className="cart-box">View cart</p>
       </div>
     </div>
