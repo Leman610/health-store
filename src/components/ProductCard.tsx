@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import "./ProductCard.css";
+import Countdown from "./Countdown";
+import { FaRegHeart, FaExpandArrowsAlt } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+=======
 import { FaRegHeart, FaExpandArrowsAlt } from "react-icons/fa";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import Countdown from "./Countdown";
 import "./ProductCard.css";
+>>>>>>> 936fdbd1ccd8dd7d88675123c70e252cea7f8526
 
 export interface Product {
   id: number;
@@ -10,7 +17,11 @@ export interface Product {
   percent: string;
   oldPrice: number;
   newPrice: number;
+<<<<<<< HEAD
+  seconds: number;
+=======
   seconds: number; // geri sayım müddəti
+>>>>>>> 936fdbd1ccd8dd7d88675123c70e252cea7f8526
 }
 
 const ProductCard = ({ product }: { product: Product }) => {
