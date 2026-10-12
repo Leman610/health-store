@@ -1,6 +1,6 @@
 import Categoriesheader from "./Categoriesheader";
 
-const Categories = () => {
+const Categoriess = () => {
   return (
     <div>
       <Categoriesheader />
@@ -8,4 +8,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default Categoriess;

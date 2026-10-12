@@ -2,6 +2,7 @@ import "./ProductCard.css";
 import Countdown from "./Countdown";
 import { FaRegHeart, FaExpandArrowsAlt } from "react-icons/fa";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import "./ProductCard.css";
 
 export interface Product {
   id: number;

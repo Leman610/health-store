@@ -21,13 +21,12 @@ export const Navbar = () => {
           <li>
             <Link to="/">HOME</Link>
           </li>
-
+          
           <li className="shopping-selector">
             <div className="shop-arrow">
               <Link to="/shop" onClick={closeMenu}>
                 SHOP
               </Link>
-
               <IoIosArrowDown
                 className="arrow-icon"
                 onClick={toggleMenu}
@@ -38,16 +37,14 @@ export const Navbar = () => {
               <ul className="shop-part">
                 <li>
                   <Link to="/shop/categories" onClick={closeMenu}>
-                    Categoriess
+                    Categories
                   </Link>
                 </li>
-
                 <li>
                   <Link to="/shop/filter-by-price" onClick={closeMenu}>
                     Filter by price
                   </Link>
                 </li>
-
                 <li>
                   <Link to="/shop/product-status" onClick={closeMenu}>
                     Product Status
