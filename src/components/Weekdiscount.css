@@ -1,0 +1,138 @@
+.weekdiscount {
+  padding: 50px 20px;
+}
+.weekdiscount-content {
+  height: 330px;
+  background-color: #faf1f2;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.weekdiscount-card {
+  background-color: #fdf2fb;
+  border-radius: 15px;
+  width: 46%;
+  margin-left: 30px;
+  padding: 20px;
+}
+.weekdiscount-title {
+  color: #ff4e4e;
+  font-size: 15px;
+  font-weight: 500;
+}
+.weekdiscount-head {
+  color: #131313;
+  font-size: 25px;
+  font-weight: 600;
+}
+.weekdiscount-text {
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: 500;
+}
+.weekdiscount-btn {
+  background-color: #ff4e4e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 170px;
+  height: 50px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.weekdiscount-btn:hover {
+  background-color: #e7bac0;
+  transform: scale(1.08);
+}
+.weekdiscount-btn:active {
+  background-color: #6fb826;
+}
+.weekdiscount-image {
+  height: 100%;
+}
+.weekdiscount-image img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .weekdiscount-content {
+    height: 300px;
+  }
+  .weekdiscount-card {
+    width: 50%;
+    margin-left: 20px;
+    padding: 18px;
+  }
+  .weekdiscount-head {
+    font-size: 22px;
+  }
+  .weekdiscount-btn {
+    width: 150px;
+    height: 46px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .weekdiscount {
+    padding: 40px 15px;
+  }
+  .weekdiscount-content {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+  .weekdiscount-card {
+    width: 100%;
+    margin-left: 0;
+  }
+  .weekdiscount-card br {
+    display: none;
+  }
+  .weekdiscount-image {
+    width: 100%;
+    height: 220px;
+  }
+  .weekdiscount-image img {
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .weekdiscount {
+    padding: 30px 10px;
+  }
+  .weekdiscount-content {
+    padding: 15px;
+    gap: 15px;
+  }
+  .weekdiscount-card {
+    padding: 15px;
+  }
+  .weekdiscount-title {
+    font-size: 13px;
+  }
+  .weekdiscount-head {
+    font-size: 20px;
+  }
+  .weekdiscount-text {
+    font-size: 13px;
+  }
+  .weekdiscount-btn {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .weekdiscount-image {
+    height: 180px;
+  }
+}
