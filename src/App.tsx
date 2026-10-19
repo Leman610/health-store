@@ -4,7 +4,7 @@ import Topbar from "./components/Topbar";
 import { Header } from "./components/Header";
 import { Navbar } from "./components/Navbar";
 import Hero from "./components/Hero";
-import Categoriesbox from "./components/Categoriesbox"; 
+import Categoriesbox from "./components/Categoriesbox";
 import Week from "./components/Week";
 import Sale from "./components/Sale";
 import Health from "./components/Health";
@@ -26,6 +26,8 @@ import Misceleneaous from "./pages/Misceleneaous";
 import FilterByPrice from "./pages/FilterByPrice";
 import Society from "./pages/Society";
 import Categories from "./pages/Categories";
+import User from "./pages/User";
+import Shoppingcart from "./pages/Shoppingcart";
 
 const App = () => {
   return (
@@ -39,7 +41,6 @@ const App = () => {
           element={
             <div className="app">
               <Hero />
-
               <Categoriesbox />
               <Week />
               <Sale />
@@ -67,6 +68,8 @@ const App = () => {
         <Route path="/misceleneaous" element={<Misceleneaous />} />
         <Route path="/shop/filter-by-price" element={<FilterByPrice />} />
         <Route path="/society" element={<Society />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/shoppingcart" element={<Shoppingcart />} />
       </Routes>
       <Footer />
     </BrowserRouter>

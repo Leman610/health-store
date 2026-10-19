@@ -4,7 +4,7 @@ import logo from "../assets/Sante.logo.png";
 import { Search } from "lucide-react";
 import user from "../assets/user-round.png";
 import heart from "../assets/heart.png";
-import shopping from "../assets/shopping-cart.png";
+import shoppingcart from "../assets/shopping-cart.png";
 export const Header = () => {
   return (
     <div className="header">
@@ -28,21 +28,25 @@ export const Header = () => {
           </button>
         </form>
 
-        <div className="header-user">
+        <Link to="./user" className="header-user">
           <img src={user} alt="" />
           <div className="user-info">
             <span className="user-welcome">Welcome</span>
             <span className="user-name">Jhon</span>
           </div>
-        </div>
+        </Link>
 
         <Link to="/wish" className="header-icons" aria-label="Favorites">
           <img src={heart} alt="" />
           <span className="number-count">1</span>
         </Link>
 
-        <Link to="/cart" className="header-icons" aria-label="Shopping cart">
-          <img src={shopping} alt="" />
+        <Link
+          to="/shoppingcart"
+          className="header-icons"
+          aria-label="Shopping cart"
+        >
+          <img src={shoppingcart} alt="" />
           <span className="number-count">1</span>
         </Link>
       </div>
