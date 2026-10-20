@@ -3,11 +3,52 @@ import { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { FiFilter } from "react-icons/fi";
 
-const Sidebar = () => {
+interface SidebarProps {
+  selectedCategories: string[];
+  setSelectedCategories: React.Dispatch<React.SetStateAction<string[]>>;
+  minPrice: string;
+  setMinPrice: (val: string) => void;
+  maxPrice: string;
+  setMaxPrice: (val: string) => void;
+  inStock: boolean;
+  setInStock: (val: boolean) => void;
+  onSale: boolean;
+  setOnSale: (val: boolean) => void;
+}
+
+const Sidebar = ({
+  selectedCategories,
+  setSelectedCategories,
+  minPrice,
+  setMinPrice,
+  maxPrice,
+  setMaxPrice,
+  inStock,
+  setInStock,
+  onSale,
+  setOnSale,
+}: SidebarProps) => {
   const [showCategories, setShowCategories] = useState(true);
   const [showPrice, setShowPrice] = useState(true);
   const [showStatus, setShowStatus] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+
+  const categoriesList = [
+    "Digestive Health",
+    "Immune Support",
+    "Respiratory Relief",
+    "Pain & Inflammation",
+    "Stress",
+    "Skin Care",
+  ];
+
+  const handleCategoryChange = (category: string) => {
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories(selectedCategories.filter((c) => c !== category));
+    } else {
+      setSelectedCategories([...selectedCategories, category]);
+    }
+  };
 
   return (
     <div className="sidebar">
@@ -24,16 +65,14 @@ const Sidebar = () => {
             Categories {showCategories ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </div>
           <div className={`sidebar-list ${!showCategories ? "hidden" : ""}`}>
-            {[
-              "Digestive Health",
-              "Immune Support",
-              "Respiratory Relief",
-              "Pain & Inflammation",
-              "Stress",
-              "Skin Care",
-            ].map((item, index) => (
+            {categoriesList.map((item, index) => (
               <label key={index}>
-                <input type="checkbox" /> {item}
+                <input
+                  type="checkbox"
+                  checked={selectedCategories.includes(item)}
+                  onChange={() => handleCategoryChange(item)}
+                />
+                {item}
               </label>
             ))}
           </div>
@@ -50,11 +89,21 @@ const Sidebar = () => {
             <div className="price-inputs">
               <div>
                 <span>Min</span>
-                <input type="text" placeholder="0" />
+                <input
+                  type="number"
+                  value={minPrice}
+                  onChange={(e) => setMinPrice(e.target.value)}
+                  placeholder="0"
+                />
               </div>
               <div>
                 <span>Max</span>
-                <input type="text" placeholder="999999" />
+                <input
+                  type="number"
+                  value={maxPrice}
+                  onChange={(e) => setMaxPrice(e.target.value)}
+                  placeholder="999999"
+                />
               </div>
             </div>
             <div className="slider-container">
@@ -64,8 +113,10 @@ const Sidebar = () => {
               <div className="dot dot-right"></div>
             </div>
             <div className="sidebar-price">
-              <span>Price: $10 - $60</span>
-              <button>Filter</button>
+              <span>
+                Price: ${minPrice || 0} - ${maxPrice || 60}
+              </span>
+              <button onClick={() => {}}>Filter</button>
             </div>
           </div>
         </div>
@@ -79,10 +130,20 @@ const Sidebar = () => {
           </div>
           <div className={`sidebar-list ${!showStatus ? "hidden" : ""}`}>
             <label>
-              <input type="checkbox" /> In Stock
+              <input
+                type="checkbox"
+                checked={inStock}
+                onChange={(e) => setInStock(e.target.checked)}
+              />
+              In Stock
             </label>
             <label>
-              <input type="checkbox" /> On Sale
+              <input
+                type="checkbox"
+                checked={onSale}
+                onChange={(e) => setOnSale(e.target.checked)}
+              />
+              On Sale
             </label>
           </div>
         </div>

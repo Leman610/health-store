@@ -12,6 +12,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Digestive Health",
+    inStock: true,
+    onSale: true,
   },
   {
     id: 2,
@@ -20,6 +23,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Immune Support",
+    inStock: false,
+    onSale: true,
   },
   {
     id: 3,
@@ -28,6 +34,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Respiratory Relief",
+    inStock: true,
+    onSale: false,
   },
   {
     id: 4,
@@ -36,6 +45,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Pain & Inflammation",
+    inStock: false,
+    onSale: false,
   },
   {
     id: 5,
@@ -44,6 +56,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Stress",
+    inStock: true,
+    onSale: false,
   },
   {
     id: 6,
@@ -52,6 +67,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Skin Care",
+    inStock: true,
+    onSale: true,
   },
   {
     id: 7,
@@ -60,6 +78,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Digestive Health",
+    inStock: true,
+    onSale: false,
   },
   {
     id: 8,
@@ -68,6 +89,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Immune Support",
+    inStock: false,
+    onSale: true,
   },
   {
     id: 9,
@@ -76,6 +100,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Respiratory Relief",
+    inStock: false,
+    onSale: false,
   },
   {
     id: 10,
@@ -84,6 +111,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Pain & Inflammation",
+    inStock: false,
+    onSale: true,
   },
   {
     id: 11,
@@ -92,6 +122,9 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Stress",
+    inStock: true,
+    onSale: true,
   },
   {
     id: 12,
@@ -100,5 +133,8 @@ export const shopProducts: ShopProduct[] = [
     percent: "35%",
     oldPrice: 5.75,
     newPrice: 5.75,
+    category: "Skin Care",
+    inStock: true,
+    onSale: false,
   },
 ];

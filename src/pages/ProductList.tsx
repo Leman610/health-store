@@ -3,38 +3,64 @@ import { useState, useEffect } from "react";
 import ShopProductCard from "../components/ShopProductCard";
 import { shopProducts } from "../data/shopProduct";
 
-const ProductList = () => {
+interface ProductListProps {
+  selectedCategories: string[];
+  minPrice: string;
+  maxPrice: string;
+  inStock: boolean;
+  onSale: boolean;
+  onAddToCart: () => void;
+}
+
+const ProductList = ({
+  selectedCategories,
+  minPrice,
+  maxPrice,
+  inStock,
+  onSale,
+  onAddToCart,
+}: ProductListProps) => {
   const [activePage, setActivePage] = useState<number>(1);
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      try {
-        setProducts(shopProducts);
-        setLoading(false);
-      } catch (err) {
-        setError("Unable to load the data.");
-        setLoading(false);
+      let filtered = shopProducts || [];
+
+      if (selectedCategories.length > 0) {
+        filtered = filtered.filter((p) =>
+          selectedCategories.includes(p.category),
+        );
       }
+
+      if (minPrice !== "") {
+        filtered = filtered.filter((p) => p.newPrice >= Number(minPrice));
+      }
+
+      if (maxPrice !== "") {
+        filtered = filtered.filter((p) => p.newPrice <= Number(maxPrice));
+      }
+
+      if (inStock) {
+        filtered = filtered.filter((p) => p.inStock === true);
+      }
+
+      if (onSale) {
+        filtered = filtered.filter((p) => p.onSale === true);
+      }
+
+      setProducts(filtered);
+      setLoading(false);
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [selectedCategories, minPrice, maxPrice, inStock, onSale]);
 
   if (loading) {
     return (
       <div className="shop-product-list">
-        <p>Products are loading...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="shop-product-list">
-        <p style={{ color: "red" }}>{error}</p>
+        <p>Loading products...</p>
       </div>
     );
   }
@@ -42,9 +68,13 @@ const ProductList = () => {
   return (
     <div className="shop-product-list">
       <div className="shop-product-card">
-        {products.map((p) => (
-          <ShopProductCard key={p.id} product={p} />
-        ))}
+        {products.length > 0 ? (
+          products.map((p) => (
+            <ShopProductCard key={p.id} product={p} onAddToCart={onAddToCart} />
+          ))
+        ) : (
+          <p>No products found matching your filter.</p>
+        )}
       </div>
 
       <div className="shop-product-list-count">

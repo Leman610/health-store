@@ -10,10 +10,23 @@ export interface ShopProduct {
   percent: string;
   oldPrice: number;
   newPrice: number;
+  category: string;
+  inStock?: boolean;
+  onSale?: boolean;
 }
 
-const ShopProductCard = ({ product }: { product: ShopProduct }) => {
+interface ShopProductCardProps {
+  product: ShopProduct;
+  onAddToCart: () => void;
+}
+
+const ShopProductCard = ({ product, onAddToCart }: ShopProductCardProps) => {
   const [count, setCount] = useState(0);
+
+  const handleAddToCart = () => {
+    setCount(1);
+    onAddToCart();
+  };
 
   return (
     <div className="shop-product-box">
@@ -43,7 +56,7 @@ const ShopProductCard = ({ product }: { product: ShopProduct }) => {
         </div>
 
         {count === 0 ? (
-          <button className="shop-product-btn" onClick={() => setCount(1)}>
+          <button className="shop-product-btn" onClick={handleAddToCart}>
             Add to cart
           </button>
         ) : (
@@ -54,9 +67,8 @@ const ShopProductCard = ({ product }: { product: ShopProduct }) => {
             >
               -
             </button>
-            <span className="-value">{count}</span>
+            <span className="count-value">{count}</span>
             <button
-              num-count
               className="num-count plus"
               onClick={() => setCount(count + 1)}
             >
