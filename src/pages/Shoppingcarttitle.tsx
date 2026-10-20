@@ -7,7 +7,7 @@ const Shoppingcarttitle = () => {
         <div className="shoppingcart-title-left">
           <span>Home</span>
           <IoIosArrowForward />
-          <span className="shoppingcart-title-active">My Account</span>
+          <span className="shoppingcart-title-active">Cart</span>
         </div>
       </div>
     </div>
