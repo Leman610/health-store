@@ -1,0 +1,64 @@
+.about-us-page {
+  width: 100%;
+}
+.about-us {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.about-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.about-us-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.about-us-text {
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+.about-us-text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.about-us-text p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+@media (max-width: 480px) {
+  .about-us {
+    height: 170px;
+  }
+  .about-us-text h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .about-us-text p {
+    font-size: 10px;
+    letter-spacing: 0.7px;
+    line-height: 1.2;
+  }
+}

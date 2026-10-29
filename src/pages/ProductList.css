@@ -35,28 +35,6 @@
   background: #62a403;
   color: #fff;
 }
-@media screen and (max-width: 1024px) {
-  .product-card {
-    gap: 24px 16px;
-  }
-  .product-card > div {
-    width: calc((100% - 32px) / 3);
-  }
-  .product-list-count {
-    margin: 30px 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .product-card {
-    gap: 20px 15px;
-  }
-  .product-card > div {
-    width: calc((100% - 15px) / 2);
-  }
-  .product-list-count {
-    margin: 25px 0;
-  }
-}
 @media screen and (max-width: 480px) {
   .product-card {
     gap: 15px 10px;

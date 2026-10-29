@@ -131,68 +131,6 @@
 .filter-btn {
   display: none;
 }
-@media (max-width: 1024px) {
-  .sidebar {
-    min-width: 220px;
-    margin-left: 40px;
-    padding: 14px;
-  }
-  .sidebar-title {
-    font-size: 17px;
-  }
-  .sidebar-list label {
-    font-size: 15px;
-  }
-  .price-inputs {
-    gap: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .shop-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .sidebar {
-    min-width: 0;
-    width: 100%;
-    margin-left: 0;
-    padding: 10px 16px;
-  }
-  .sidebar-title {
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-  .sidebar-list {
-    gap: 12px;
-  }
-  .sidebar-list label {
-    font-size: 15px;
-  }
-  .price-inputs span {
-    font-size: 15px;
-  }
-  .filter-btn {
-    color: #2b2a2a;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-    font-size: 15px;
-    cursor: pointer;
-  }
-  .sidebar-content-wrapper {
-    display: none;
-  }
-  .sidebar-content-wrapper.open {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  }
-}
 @media (max-width: 480px) {
   .sidebar {
     padding: 8px 12px;

@@ -1,0 +1,258 @@
+.billing-page-container {
+  color: #131313;
+  width: 100%;
+  margin: 0;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+.billing-page-container .cart-message {
+  color: #2b2a2a;
+  border: 1px solid #9c9c9c;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+}
+.billing-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+}
+.billing-details-form {
+  flex: 1;
+}
+.your-order {
+  width: 350px;
+  min-width: 250px;
+  font-size: 14px;
+}
+.billing-details-form h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+.form-row .form-group {
+  flex: 1;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-group label {
+  color: #1e1e1e;
+  font-size: 14px;
+  margin: 12px 0;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  color: #1e1e1e;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  height: 60px;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 17px;
+  outline: none;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b3b3b3;
+}
+.form-group select {
+  color: #b3b3b3;
+  cursor: pointer;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #62a403;
+}
+.form-group textarea {
+  height: 100px;
+  padding: 25px 20px;
+}
+.your-order h3 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.order-header-row {
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+.order-product-item {
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.order-product-quantity {
+  max-width: 215px;
+}
+.order-shipping-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.order-shipping-block > span {
+  margin-top: 40px;
+  font-size: 14px;
+}
+.shipping-options-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.shipping-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  height: 30px;
+  cursor: pointer;
+}
+.shipping-label input {
+  width: 17px;
+  height: 15px;
+  cursor: pointer;
+}
+.shipping-to-text {
+  font-size: 14px;
+}
+.shipping-destination-text {
+  color: #62a403;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: right;
+  font-weight: 500;
+  font-size: 14px;
+}
+.order-total-row {
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.order-total-price {
+  color: #ff4e4e;
+  font-size: 21px;
+  font-weight: 700;
+}
+.payment-methods-block {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.payment-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  color: #1e1e1e;
+}
+.payment-label input {
+  accent-color: #5ba305;
+  width: 19px;
+  height: 19px;
+  margin: 4px 0 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.payment-label span {
+  display: flex;
+  flex-direction: column;
+}
+.payment-label span span {
+  color: #757575;
+  font-size: 16px;
+  margin-top: 2px;
+}
+.privacy-policy-text {
+  color: #9c9c9c;
+  font-size: 14px;
+  margin: 15px 0;
+}
+.place-order-btn {
+  background: #62a403;
+  color: #f5f5f5;
+  font-size: 14px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.place-order-btn:hover {
+  background: #518f05;
+}
+@media (max-width: 480px) {
+  .billing-page-container {
+    padding: 20px 15px;
+  }
+  .billing-page-container .cart-message {
+    height: auto;
+    min-height: 50px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  .billing-layout {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .billing-details-form {
+    width: 100%;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .your-order {
+    width: 100%;
+    min-width: 0;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    height: 50px;
+    font-size: 16px;
+    padding: 0 14px;
+  }
+  .form-group textarea {
+    height: 90px;
+    padding: 14px;
+  }
+  .order-product-quantity {
+    max-width: 180px;
+  }
+  .shipping-options-list {
+    align-items: flex-start;
+  }
+  .shipping-label {
+    justify-content: flex-start;
+  }
+  .shipping-to-text,
+  .shipping-destination-text {
+    text-align: left;
+  }
+  .place-order-btn {
+    height: 48px;
+    font-size: 15px;
+  }
+}

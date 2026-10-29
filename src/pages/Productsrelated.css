@@ -38,16 +38,6 @@
   background-color: #62a403;
   color: #ffffff;
 }
-@media (max-width: 768px) {
-  .advice {
-    padding: 30px 15px;
-  }
-  .advice-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
 @media (max-width: 480px) {
   .advice {
     padding: 20px 10px;

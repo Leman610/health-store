@@ -67,54 +67,6 @@
   font-weight: bold;
   cursor: pointer;
 }
-@media (max-width: 1024px) {
-  .our-shop {
-    height: 240px;
-  }
-  .dessert-image {
-    height: 300px;
-  }
-  .our-shop-text h1 {
-    font-size: 36px;
-  }
-  .our-shop-text p {
-    font-size: 15px;
-  }
-  .view-cart {
-    width: 280px;
-    padding: 12px 20px;
-  }
-}
-@media (max-width: 768px) {
-  .our-shop {
-    height: 220px;
-  }
-  .dessert-image {
-    height: 260px;
-    opacity: 0.7;
-  }
-  .our-shop-content {
-    padding: 0 20px;
-  }
-  .our-shop-text h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-  .our-shop-text p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .view-cart {
-    width: 240px;
-    bottom: 15px;
-    right: 15px;
-    padding: 10px 16px;
-  }
-  .view-cart span,
-  .cart-box {
-    font-size: 13px;
-  }
-}
 @media (max-width: 480px) {
   .our-shop {
     height: 180px;

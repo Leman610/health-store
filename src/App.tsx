@@ -28,6 +28,7 @@ import Society from "./pages/Society";
 import Categories from "./pages/Categories";
 import User from "./pages/User";
 import Shoppingcart from "./pages/Shoppingcart";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   return (
@@ -70,6 +71,7 @@ const App = () => {
         <Route path="/society" element={<Society />} />
         <Route path="/user" element={<User />} />
         <Route path="/shoppingcart" element={<Shoppingcart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </BrowserRouter>

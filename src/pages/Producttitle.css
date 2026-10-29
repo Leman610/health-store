@@ -18,26 +18,6 @@
 .categories-header-actives {
   color: #9c9c9c;
 }
-@media (max-width: 1024px) {
-  .categories-header-titles {
-    padding-top: 8px;
-  }
-  .categories-header-products {
-    gap: 6px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 768px) {
-  .categories-header-contents {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .categories-header-products {
-    gap: 5px;
-    font-size: 13px;
-  }
-}
 @media (max-width: 480px) {
   .categories-header-titles {
     padding: 8px 15px 0;

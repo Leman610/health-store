@@ -175,48 +175,6 @@
   color: #9c9c9c;
   margin-right: 8px;
 }
-@media (max-width: 1024px) {
-  .categories-product-info-title {
-    font-size: 27px;
-  }
-  .categories-star {
-    font-size: 21px;
-    gap: 6px;
-  }
-  .categories-product-count strong {
-    font-size: 23px;
-  }
-  .categories-product-text {
-    font-size: 15px;
-  }
-}
-@media (max-width: 768px) {
-  .categories-product-info-title,
-  .categories-product-desc {
-    max-width: 100%;
-  }
-  .categories-product-info-title {
-    font-size: 24px;
-  }
-  .categories-star {
-    font-size: 20px;
-  }
-  .categories-product-count strong {
-    font-size: 22px;
-  }
-  .categories-product-text {
-    font-size: 15px;
-    margin: 12px 0 16px;
-  }
-  .categories-product-text br,
-  .categories-product-desc br {
-    display: none;
-  }
-  .product-time span {
-    padding: 6px 8px;
-    font-size: 13px;
-  }
-}
 @media (max-width: 480px) {
   .categories-product-info-title {
     font-size: 21px;

@@ -1,0 +1,34 @@
+.contact-title-header {
+  padding: 10px 0;
+}
+.contact-title-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.contact-title-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #000000;
+}
+.contact-title-active {
+  color: #9c9c9c;
+}
+@media (max-width: 480px) {
+  .contact-title-header {
+    padding-top: 8px;
+  }
+  .contact-title-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .contact-title-left {
+    gap: 4px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}

@@ -1,6 +1,7 @@
 import "./Cart.css";
 import { useState } from "react";
 import { selectedProducts } from "../data/cart";
+import { useNavigate } from "react-router-dom";
 
 export type CartProduct = {
   id: number;
@@ -16,6 +17,7 @@ function Cart() {
   const [coupon, setCoupon] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
   const [message, setMessage] = useState("Message to display");
+  const navigate = useNavigate();
 
   function formatPrice(price: number) {
     if (Number.isInteger(price)) {
@@ -211,7 +213,7 @@ function Cart() {
             type="button"
             className="checkout-btn"
             disabled={products.length === 0}
-            onClick={() => setMessage("Checkout page is not connected yet.")}
+            onClick={() => navigate("/checkout")}
           >
             Proceed to checkout
           </button>
