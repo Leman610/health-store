@@ -26,21 +26,27 @@ const ProductList = ({
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    setLoading(true);
+
     const timer = setTimeout(() => {
       let filtered = shopProducts;
 
       if (selectedCategories.length > 0) {
         filtered = filtered.filter((p) =>
-          selectedCategories.includes(p.category),
+          selectedCategories.includes(p.category)
         );
       }
 
       if (minPrice !== "") {
-        filtered = filtered.filter((p) => p.newPrice >= Number(minPrice));
+        filtered = filtered.filter(
+          (p) => p.newPrice >= Number(minPrice)
+        );
       }
 
       if (maxPrice !== "") {
-        filtered = filtered.filter((p) => p.newPrice <= Number(maxPrice));
+        filtered = filtered.filter(
+          (p) => p.newPrice <= Number(maxPrice)
+        );
       }
 
       if (inStock) {
@@ -60,18 +66,23 @@ const ProductList = ({
 
   if (loading) {
     return (
-      <div className="shop-product-list">
+      <div className="shop-product-list loading-container">
+        <div className="infinity-loader">∞</div>
         <p>Loading products...</p>
       </div>
     );
   }
-
+  
   return (
     <div className="shop-product-list">
       <div className="shop-product-card">
         {products.length > 0 ? (
           products.map((p) => (
-            <ShopProductCard key={p.id} product={p} onAddToCart={onAddToCart} />
+            <ShopProductCard
+              key={p.id}
+              product={p}
+              onAddToCart={onAddToCart}
+            />
           ))
         ) : (
           <p>No products found matching your filter.</p>
@@ -83,7 +94,9 @@ const ProductList = ({
           <button
             key={num}
             className={
-              activePage === num ? "shop-page-btn active" : "shop-page-btn"
+              activePage === num
+                ? "shop-page-btn active"
+                : "shop-page-btn"
             }
             onClick={() => setActivePage(num)}
           >

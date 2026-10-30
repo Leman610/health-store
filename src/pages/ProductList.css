@@ -21,34 +21,70 @@
   margin: 40px 0;
 }
 .shop-page-btn {
+  background-color: #f5f5f5;
+  color: #2b2a2a;
   width: 28px;
   height: 28px;
   padding: 0;
   border: none;
   border-radius: 4px;
-  background-color: #f5f5f5;
   font-size: 13px;
-  color: #2b2a2a;
   cursor: pointer;
 }
 .shop-page-btn.active {
   background: #62a403;
   color: #fff;
 }
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  gap: 15px;
+  width: 100%;
+}
+.loading-container p {
+  color: #777;
+  font-size: 15px;
+  margin: 0;
+}
+.infinity-loader {
+  color: #62a403;
+  display: inline-block;
+  font-size: 75px;
+  font-weight: bold;
+  line-height: 1;
+  animation: infinity-spin 2s linear infinite;
+}
+@keyframes infinity-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (max-width: 480px) {
-  .product-card {
+  .shop-product-card {
     gap: 15px 10px;
   }
-  .product-card > div {
+  .shop-product-card > div {
     width: calc((100% - 10px) / 2);
   }
-  .product-list-count {
+  .shop-product-list-count {
     margin: 20px 0;
     flex-wrap: wrap;
   }
-  .page-btn {
+  .shop-page-btn {
     width: 26px;
     height: 26px;
     font-size: 12px;
+  }
+  .loading-container {
+    min-height: 250px;
+  }
+  .infinity-loader {
+    font-size: 65px;
   }
 }

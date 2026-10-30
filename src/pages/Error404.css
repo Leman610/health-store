@@ -1,0 +1,100 @@
+.error-404 {
+  background-color: #fff;
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+.error-404-content {
+  max-width: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.error-404-number {
+  color: #62a403;
+  font-size: 150px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 8px;
+}
+.error-404-image {
+  width: 180px;
+  height: 150px;
+  margin: 10px 0 20px;
+}
+.error-404-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.error-404-content h1 {
+  color: #252525;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.error-404-content p {
+  color: #777;
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 10px 0 25px;
+}
+.error-404-btn {
+  background-color: #62a403;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.error-404-btn:hover {
+  background-color: #4e8302;
+  transform: translateY(-3px);
+}
+@media screen and (max-width: 768px) {
+  .error-404-number {
+    font-size: 120px;
+  }
+  .error-404-content h1 {
+    font-size: 27px;
+  }
+  .error-404-image {
+    width: 150px;
+    height: 130px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .error-404 {
+    min-height: 65vh;
+    padding: 40px 15px;
+  }
+  .error-404-number {
+    font-size: 90px;
+  }
+  .error-404-image {
+    width: 120px;
+    height: 110px;
+  }
+  .error-404-content h1 {
+    font-size: 23px;
+  }
+  .error-404-content p {
+    font-size: 13px;
+  }
+  .error-404-btn {
+    padding: 12px 25px;
+    font-size: 13px;
+  }
+}

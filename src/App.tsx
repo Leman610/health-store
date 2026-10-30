@@ -29,6 +29,7 @@ import Categories from "./pages/Categories";
 import User from "./pages/User";
 import Shoppingcart from "./pages/Shoppingcart";
 import Checkout from "./pages/Checkout";
+import Error404 from "./pages/Error404";
 
 const App = () => {
   return (
@@ -72,6 +73,7 @@ const App = () => {
         <Route path="/user" element={<User />} />
         <Route path="/shoppingcart" element={<Shoppingcart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
     </BrowserRouter>
