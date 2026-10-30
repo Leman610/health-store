@@ -7,7 +7,7 @@ import type { ShopProduct } from "../components/ShopProductCard";
 export const shopProducts: ShopProduct[] = [
   {
     id: 1,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Organic Superfood Mix",
     image: food,
     percent: "35%",
     oldPrice: 5.75,
@@ -18,7 +18,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 2,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Premium Organic Coffee",
     image: peets,
     percent: "35%",
     oldPrice: 5.75,
@@ -29,7 +29,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 3,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Organic Turmeric Powder",
     image: turmeric,
     percent: "35%",
     oldPrice: 5.75,
@@ -40,7 +40,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 4,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Fresh Fruit Juice",
     image: fruit,
     percent: "35%",
     oldPrice: 5.75,
@@ -51,7 +51,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 5,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Organic Superfood Mix",
     image: food,
     percent: "35%",
     oldPrice: 5.75,
@@ -62,7 +62,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 6,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Premium Organic Coffee",
     image: peets,
     percent: "35%",
     oldPrice: 5.75,
@@ -73,7 +73,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 7,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Organic Turmeric Powder",
     image: turmeric,
     percent: "35%",
     oldPrice: 5.75,
@@ -84,7 +84,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 8,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Fresh Fruit Juice",
     image: fruit,
     percent: "35%",
     oldPrice: 5.75,
@@ -95,7 +95,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 9,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Organic Superfood Mix",
     image: food,
     percent: "35%",
     oldPrice: 5.75,
@@ -106,7 +106,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 10,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Premium Organic Coffee",
     image: peets,
     percent: "35%",
     oldPrice: 5.75,
@@ -117,7 +117,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 11,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Organic Turmeric Powder",
     image: turmeric,
     percent: "35%",
     oldPrice: 5.75,
@@ -128,7 +128,7 @@ export const shopProducts: ShopProduct[] = [
   },
   {
     id: 12,
-    title: "Mint & Ginger Digestive Herbal Tea Lorem ipsum",
+    title: "Fresh Fruit Juice",
     image: fruit,
     percent: "35%",
     oldPrice: 5.75,

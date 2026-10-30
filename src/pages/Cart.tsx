@@ -1,6 +1,5 @@
 import "./Cart.css";
-import { useState } from "react";
-import { selectedProducts } from "../data/cart";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export type CartProduct = {
@@ -12,31 +11,49 @@ export type CartProduct = {
 };
 
 function Cart() {
-  const [products, setProducts] = useState<CartProduct[]>(selectedProducts);
+  const [products, setProducts] = useState<CartProduct[]>(() => {
+    const savedCart = localStorage.getItem("cart");
+
+    if (savedCart) {
+      return JSON.parse(savedCart);
+    }
+
+    return [];
+  });
+
   const [shipping, setShipping] = useState("flat");
   const [coupon, setCoupon] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
-  const [message, setMessage] = useState("Message to display");
+  const [message, setMessage] = useState("");
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(products));
+  }, [products]);
 
   function formatPrice(price: number) {
     if (Number.isInteger(price)) {
       return "$" + price;
     }
+
     return "$" + price.toFixed(2);
   }
 
   let subtotal = 0;
+
   for (let i = 0; i < products.length; i++) {
-    subtotal = subtotal + products[i].price * products[i].quantity;
+    subtotal += products[i].price * products[i].quantity;
   }
 
   let shippingCost = 0;
+
   if (shipping === "flat" && products.length > 0) {
     shippingCost = 15;
   }
 
   let discount = 0;
+
   if (couponApplied) {
     discount = subtotal * 0.1;
   }
@@ -45,12 +62,18 @@ function Cart() {
 
   function changeQuantity(id: number, amount: number) {
     const newProducts = [];
+
     for (let i = 0; i < products.length; i++) {
       const product = products[i];
+
       if (product.id === id) {
         const newQuantity = product.quantity + amount;
+
         if (newQuantity >= 1) {
-          newProducts.push({ ...product, quantity: newQuantity });
+          newProducts.push({
+            ...product,
+            quantity: newQuantity,
+          });
         } else {
           newProducts.push(product);
         }
@@ -58,11 +81,13 @@ function Cart() {
         newProducts.push(product);
       }
     }
+
     setProducts(newProducts);
   }
 
   function removeProduct(id: number) {
     const newProducts = products.filter((product) => product.id !== id);
+
     setProducts(newProducts);
     setMessage("Product removed from cart.");
   }
@@ -86,7 +111,8 @@ function Cart() {
 
   return (
     <div className="cart-page">
-      <div className="cart-message">{message}</div>
+      {message !== "" && <div className="cart-message">{message}</div>}
+
       <div className="cart-layout">
         <div className="cart-main">
           <div className="cart-table">
@@ -108,6 +134,7 @@ function Cart() {
                   <div className="cart-product-image">
                     <img src={product.image} alt={product.name} />
                   </div>
+
                   <span className="cart-product-name">{product.name}</span>
                 </div>
 
@@ -120,7 +147,9 @@ function Cart() {
                   >
                     -
                   </button>
+
                   <span>{product.quantity}</span>
+
                   <button
                     type="button"
                     onClick={() => changeQuantity(product.id, 1)}
@@ -147,6 +176,7 @@ function Cart() {
           <div className="cart-coupon-row">
             <div className="cart-coupon">
               <label htmlFor="coupon">Coupon:</label>
+
               <input
                 id="coupon"
                 type="text"
@@ -154,6 +184,7 @@ function Cart() {
                 value={coupon}
                 onChange={(e) => setCoupon(e.target.value)}
               />
+
               <button
                 type="button"
                 className="apply-coupon"
@@ -179,9 +210,11 @@ function Cart() {
 
           <div className="cart-shipping">
             <span>Shipping</span>
+
             <div className="shipping-options">
               <label>
                 <span>Flat rate: $15.00</span>
+
                 <input
                   type="radio"
                   name="shipping"
@@ -192,6 +225,7 @@ function Cart() {
 
               <label>
                 <span>Local pickup</span>
+
                 <input
                   type="radio"
                   name="shipping"

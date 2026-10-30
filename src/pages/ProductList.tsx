@@ -1,6 +1,7 @@
 import "./ProductList.css";
 import { useState, useEffect } from "react";
 import ShopProductCard from "../components/ShopProductCard";
+import type { ShopProduct } from "../components/ShopProductCard";
 import { shopProducts } from "../data/shopProduct";
 
 interface ProductListProps {
@@ -9,7 +10,7 @@ interface ProductListProps {
   maxPrice: string;
   inStock: boolean;
   onSale: boolean;
-  onAddToCart: () => void;
+  onAddToCart: (product: ShopProduct) => void;
 }
 
 const ProductList = ({
@@ -21,12 +22,12 @@ const ProductList = ({
   onAddToCart,
 }: ProductListProps) => {
   const [activePage, setActivePage] = useState<number>(1);
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<ShopProduct[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      let filtered = shopProducts || [];
+      let filtered = shopProducts;
 
       if (selectedCategories.length > 0) {
         filtered = filtered.filter((p) =>

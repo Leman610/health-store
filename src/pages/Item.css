@@ -7,6 +7,9 @@
   flex-direction: column;
   gap: 30px;
 }
+.item-part {
+  width: 100%;
+}
 .item-title {
   font-size: 30px;
   font-weight: 600;
@@ -14,6 +17,8 @@
 }
 .item-accordion {
   border: 1px solid #cccccc;
+  width: 100%;
+  border-radius: 10px;
 }
 .faq-item {
   border-top: 1px solid #cccccc;

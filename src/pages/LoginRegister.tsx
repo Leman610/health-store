@@ -5,19 +5,45 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 const LoginRegister = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [show, setShow] = useState(false);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = () => {
+    if (password.length < 8) {
+      setError("The password must consist of at least 8 characters.!");
+      alert("The password must consist of at least 8 characters.!");
+      return;
+    }
+
+    setError("");
+
+    alert(
+      isLogin
+        ? "Login password is correct!"
+        : "Registration password successful!",
+    );
+  };
+
+  const handleTabChange = (login: boolean) => {
+    setIsLogin(login);
+    setError("");
+    setPassword("");
+  };
+
   return (
     <div className="login-register-user">
       <div className="login-register-box">
         <h2 className="login-register-title">
           <span
             className={isLogin ? "active" : ""}
-            onClick={() => setIsLogin(true)}
+            onClick={() => handleTabChange(true)}
           >
             Login
           </span>
+
           <span
             className={!isLogin ? "active" : ""}
-            onClick={() => setIsLogin(false)}
+            onClick={() => handleTabChange(false)}
           >
             Register
           </span>
@@ -38,19 +64,34 @@ const LoginRegister = () => {
             <input type="text" placeholder="." />
           </div>
         )}
+
         <label>Password</label>
+
         <div className="login-register-password">
-          <input type={show ? "text" : "password"} placeholder="." />
+          <input
+            type={show ? "text" : "password"}
+            placeholder="."
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setError("");
+            }}
+          />
+
           <button type="button" onClick={() => setShow(!show)}>
             {show ? <FiEyeOff /> : <FiEye />}
           </button>
         </div>
+
+        {error && <p className="password-error">{error}</p>}
+
         {isLogin ? (
           <div className="login-register-selection">
             <label>
               <input type="checkbox" />
-              Remenber me
+              Remember me
             </label>
+
             <a href="#">Lost your password?</a>
           </div>
         ) : (
@@ -60,7 +101,12 @@ const LoginRegister = () => {
             and for other purposes <br /> described in our privacy policy.
           </p>
         )}
-        <button className="login-register-btn">
+
+        <button
+          type="button"
+          className="login-register-btn"
+          onClick={handleSubmit}
+        >
           {isLogin ? "Login" : "Register"}
         </button>
       </div>

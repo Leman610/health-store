@@ -13,71 +13,82 @@ const Item = () => {
     <div className="item">
       <div className="container item-content">
         <div className="item-part">
-          <h2 className="item-title">Praesent eget convallis dolor</h2>
+          <h2 className="item-title"> Frequently Asked Questions</h2>
           <div className="item-accordion">
             <div className="faq-item">
               <button className="faq-question" onClick={() => setOpen1(!open1)}>
-                Accordion Item #1
+                How can I order products?
               </button>
               {open1 && (
                 <p>
-                  This is the first item’s accordion body. It is shown by
-                  default, until the collapse plugin adds the appropriate
-                  classes that we use to style each element. These classes
-                  control the overall appearance, as well as the showing and
-                  hiding via CSS transitions. You can modify any of this with
-                  custom CSS or overriding our default variables. It’s also
-                  worth noting that just about any HTML can go within the
-                  .accordion-body, though the transition does limit overflow.
+                  Choose the product you want and add it to your shopping cart.
+                  Then enter your details and complete the checkout process.
+                  Once your order is confirmed, the delivery process will begin.
                 </p>
               )}
             </div>
             <div className="faq-item">
               <button className="faq-question" onClick={() => setOpen2(!open2)}>
-                Accordion Item #2
+                How long does delivery take?
               </button>
-              {open2 && <p>This is the second item’s accordion body.</p>}
+              {open2 && (
+                <p>
+                  Delivery time depends on your location. You can find more
+                  information about delivery during the checkout process.
+                </p>
+              )}
             </div>
             <div className="faq-item">
               <button className="faq-question" onClick={() => setOpen3(!open3)}>
-                Accordion Item #3
+                Where can I find product prices?
               </button>
-              {open3 && <p>This is the third item’s accordion body.</p>}
+              {open3 && (
+                <p>
+                  The prices of all products are displayed on our website. Click
+                  on a product to view its price, description, and other
+                  details.
+                </p>
+              )}
             </div>
           </div>
         </div>
 
         <div className="item-part">
-          <h2 className="item-title">Praesent eget convallis dolor</h2>
+          <h2 className="item-title">Orders and Payments</h2>
           <div className="item-accordion">
             <div className="faq-item">
               <button className="faq-question" onClick={() => setOpen4(!open4)}>
-                Accordion Item #1
+                What payment methods can I use?
               </button>
               {open4 && (
                 <p>
-                  This is the first item’s accordion body. It is shown by
-                  default, until the collapse plugin adds the appropriate
-                  classes that we use to style each element. These classes
-                  control the overall appearance, as well as the showing and
-                  hiding via CSS transitions. You can modify any of this with
-                  custom CSS or overriding our default variables. It’s also
-                  worth noting that just about any HTML can go within the
-                  .accordion-body, though the transition does limit overflow.
+                  You can choose one of the available payment methods during
+                  checkout. The available options will be displayed when you
+                  place your order.
                 </p>
               )}
             </div>
             <div className="faq-item">
               <button className="faq-question" onClick={() => setOpen5(!open5)}>
-                Accordion Item #2
+                How can I track my order?
               </button>
-              {open5 && <p>This is the second item’s accordion body.</p>}
+              {open5 && (
+                <p>
+                  To get updates about your order status, please contact us
+                  through the Contact section of our website.
+                </p>
+              )}
             </div>
             <div className="faq-item">
               <button className="faq-question" onClick={() => setOpen6(!open6)}>
-                Accordion Item #3
+                How can I contact you?
               </button>
-              {open6 && <p>This is the third item’s accordion body.</p>}
+              {open6 && (
+                <p>
+                  If you have any questions or suggestions, visit the Contact
+                  section of our website to find our contact information.
+                </p>
+              )}
             </div>
           </div>
         </div>
